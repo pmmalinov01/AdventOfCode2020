@@ -7,13 +7,13 @@ import (
 	"strconv"
 )
 
-func errCheck(err error) {
+func ErrCheck(err error) {
 	if err != nil {
 		panic(err)
 	}
 }
 
-func readNumbers(fileName string) []int {
+func ReadNumbers(fileName string) []int {
 	file, err := os.Open(fileName)
 	defer file.Close()
 	if err != nil {
